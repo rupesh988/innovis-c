@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -6,13 +7,22 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = () => {
-        // Handle login logic here
-        console.log('Email:', email);
-        console.log('Password:', password);
+    const handleLogin = async () => {
+
+        const data = {
+            email:email,
+            password:password
+        }
+        const response = await axios.post("http://localhost:8080/login",data)
+        const res = await response.data;
+        if(res.status){
+            navigate('/userpage');
+
+        }else{
+            alert("login failed")
+        }
+
         
-        // Navigate to the user page after handling login
-        navigate('/userpage');
     };
 
     return (

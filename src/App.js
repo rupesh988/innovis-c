@@ -7,6 +7,7 @@ import Password from "./components/ResetPassword";
 import Userpg from "./components/UserPage";
 import Explore from "./components/Explore";
 import Chat from "./components/chat"
+import Fillapplication from "./components/FillApplication";
 const App = () => {
   return (
     <Router>
@@ -18,6 +19,8 @@ const App = () => {
         <Route path="/userpage" element={<Userpg/>} />
         <Route path="/explore" element={<Explore/>} />
         <Route path="/chat" element={<Chat/>} />
+        <Route path="/fillapplication" element={<Fillapplication />}/>
+
         
       </Routes>
     </Router>

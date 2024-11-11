@@ -1,17 +1,30 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Signup = () => {
     const navigate = useNavigate(); // Initialize navigate
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = () => {
-        // Handle login logic here
-        console.log('Email:', email);
-        console.log('Password:', password);
-    };
+    const handlesignUp = async () => {
+        console.log("request sent")
 
+        const data = {
+            email:email,
+            password:password
+        }
+
+        const response = await axios.post("http://localhost:8080/login",data);
+
+        const res = await response.data;
+        if(res.status){
+            navigate("/userpage")
+        }else{
+            alert("signup failed ");
+        }
+        
+    }
     return (
         <div className="bg-white flex flex-col items-center justify-center min-h-screen">
             <div className="flex items-center justify-between p-4 bg-white absolute left-6 top-1 hover:translate-x-5 duration-500 ease-in-out">
@@ -48,7 +61,7 @@ const Signup = () => {
                 </div>
 
                 <button 
-                    onClick={() => navigate('/userpage')} // Navigate to /signup on click
+                    onClick={handlesignUp}
                     className="w-full bg-black text-white text-lg p-2 rounded-lg border-2 border-black hover:bg-white hover:text-black transition-all duration-500"
                 >
                     Signup
