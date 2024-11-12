@@ -16,6 +16,7 @@ const Login = () => {
         const response = await axios.post("http://localhost:8080/login",data)
         const res = await response.data;
         if(res.status){
+            localStorage.setItem("user",email);
             navigate('/userpage');
 
         }else{

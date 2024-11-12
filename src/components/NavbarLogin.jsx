@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useNavigate } from 'react-router-dom'; 
 import img1 from './images/search.png';
 
-const Navbar = () => {
-    const [email, setEmail] = useState('');
-    const navigate = useNavigate(); // Initialize navigate
+const Navbar = (props) => {
+    const [search, setSearch] = useState('');
+    const navigate = useNavigate(); 
 
     return (
         <nav className="bg-white p-2 border-b-2">
@@ -16,20 +16,21 @@ const Navbar = () => {
                         <img src={img1} alt="Description" className="w-10 h-10" />
                         <input 
                             type="text" 
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
                             placeholder='search'
                             className="block w-full p-2 bg-white border-gray-300 placeholder-black rounded hover:border-black focus:outline-none focus:border-black" 
                             required 
                         />
                     </div>
                 </div>
+                
                 <div className="flex space-x-4 border-black border-l pl-1">
                     <button 
-                        onClick={() => navigate('/explore')} // Navigate to /explore
+                        onClick={() => {props.login ? navigate("/login") : navigate('/explore')}}
                         className="w-24 bg-green-400 text-white text-lg font-mono p-2 rounded-md border-2 border-black hover:bg-white hover:text-black transition-all duration-500"
                     >
-                        Explore
+                        {props.login ? "Logout" : "explore"}
                     </button>
                     
                     <button 
@@ -37,6 +38,7 @@ const Navbar = () => {
                     >
                         Account
                     </button>
+                    
                 </div>
             </div>
         </nav>

@@ -1,13 +1,31 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 const Login = () => {
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [status, setStatus] = useState('Reset Password');
+    const [bstatus,setbstatus] = useState(true)
 
-    const handleLogin = () => {
-        // Handle login logic here
-        console.log('Email:', email);
-        console.log('Password:', password);
+    const handleReset = async () => {
+
+        if(bstatus){
+        setbstatus(false);
+        setStatus("sending OTP...")
+
+        let res = await  axios.post(`http://localhost:8080/passwdreset/${email}`)
+        res = res.data
+        setbstatus(true);
+        if(res.status == true){
+            alert("reset successful")
+
+        }else{
+            alert(res.message);
+        }
+        setStatus('Reset password')
+    }
+
+
+        
     };
 
     return (
@@ -30,8 +48,8 @@ const Login = () => {
                     />
                 </div>
 
-                <button onClick={handleLogin} className="w-full bg-black text-white text-lg p-2 rounded-lg border-2 border-black hover:bg-white hover:text-black transition-all duration-500  ">
-                    Reset Password
+                <button onClick={handleReset} className="w-full bg-black text-white text-lg p-2 rounded-lg border-2 border-black hover:bg-white hover:text-black transition-all duration-500  ">
+                    {status}
                 </button>
             </div>
         </div>

@@ -15,13 +15,14 @@ const Signup = () => {
             password:password
         }
 
-        const response = await axios.post("http://localhost:8080/login",data);
+        const response = await axios.post("http://localhost:8080/signup",data);
 
         const res = await response.data;
-        if(res.status){
-            navigate("/userpage")
+        console.log(res)
+        if(res.status == true){
+            navigate("/login")
         }else{
-            alert("signup failed ");
+            alert(res.message);
         }
         
     }
