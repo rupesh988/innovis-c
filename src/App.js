@@ -8,6 +8,7 @@ import Userpg from "./components/UserPage";
 import Explore from "./components/Explore";
 import Chat from "./components/chat"
 import Fillapplication from "./components/FillApplication";
+import Paper from './components/exp/publish-paper'
 const App = () => {
   return (
     <Router>
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/explore" element={<Explore/>} />
         <Route path="/chat" element={<Chat/>} />
         <Route path="/fillapplication" element={<Fillapplication />}/>
+        <Route path="/papers"  element={<Paper/>}/>
 
         
       </Routes>
