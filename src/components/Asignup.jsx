@@ -46,9 +46,9 @@ const Signup = () => {
                 </h1>
             </div>
             <div className="bg-white p-8 rounded-lg w-96">
-                <h2 className="text-2xl font-bold font-mono text-center mb-6">Signup for Innovis</h2>
+                <h2 className="text-2xl font-bold font-mono text-center mb-6">Innovis</h2>
                 <div className="mb-6 font-bold w-full h-12 bg-white text-black text-lg p-2 rounded border-2 border-black hover:bg-gray-100 hover:border-green-300 hover:text-green-300 transition-all duration-300">
-                    <text> Continue with Google</text>
+                    <text> Admin Registration</text>
                 </div>
                 <text className="mb-4">or</text>
                 <div className="mb-4 mt-4">
@@ -57,7 +57,7 @@ const Signup = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder='email'
-                        className="mt-1 block w-full p-2 bg-green-50 border-2 border-gray-300 placeholder-black font-mono rounded hover:border-2 hover:border-black focus:outline-none focus:border-2 focus:border-black" 
+                        className="mt-1 block w-full p-2 bg-red-50 border-2 border-gray-300 placeholder-black font-mono rounded hover:border-2 hover:border-black focus:outline-none focus:border-2 focus:border-black" 
                         required 
                     />
                 </div>
@@ -68,20 +68,20 @@ const Signup = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder='password'
-                        className="mt-1 block w-full p-2 bg-green-50 rounded border-gray-300 placeholder-black border-2 font-mono hover:border-2 hover:border-black focus:outline-none focus:border-2 focus:border-black" 
+                        className="mt-1 block w-full p-2 bg-red-50 rounded border-gray-300 placeholder-black border-2 font-mono hover:border-2 hover:border-black focus:outline-none focus:border-2 focus:border-black" 
                         required 
                     />
                 </div>
 
                 <button 
                     onClick={handlesignUp}
-                    className="w-full bg-black text-white text-lg p-2 rounded-lg border-2 border-black hover:bg-white hover:text-black transition-all duration-500"
+                    className="w-full bg-red-500 text-white text-lg p-2 rounded-lg border-2 border-black hover:bg-white hover:text-black transition-all duration-500"
                 >
                     Signup
                 </button>
 
                 <p className="mt-4 text-center text-gray-600">
-                    <a href="/login" className="text-blue-500 hover:underline">Already have an Account?</a>
+                    <a href="/alogin" className="text-blue-500 hover:underline">Already have an Account?</a>
                 </p>
                 
                 <p className="mt-4 text-center text-gray-600 font-thin">

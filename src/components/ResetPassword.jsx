@@ -11,8 +11,12 @@ const Login = () => {
         if(bstatus){
         setbstatus(false);
         setStatus("sending OTP...")
-
-        let res = await  axios.post(`http://localhost:8080/passwdreset/${email}`)
+        let res='';
+        try{
+            res = await  axios.post(`http://localhost:8080/passwdreset/${email}`)
+        }catch{
+            alert("email failed due to email server down")
+        }
         res = res.data
         setbstatus(true);
         if(res.status == true){

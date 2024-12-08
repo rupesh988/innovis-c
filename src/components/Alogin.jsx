@@ -26,7 +26,7 @@ const Login = () => {
     
             if (res.status) {
                 localStorage.setItem("user", email);
-                navigate('/userpage');
+                navigate('/admin');
             } else {
                 alert("Login failed");
             }
@@ -43,9 +43,9 @@ const Login = () => {
                 <h1 className="text-black text-4xl font-bold">Innovis</h1>
             </div>
             <div className="bg-white p-8 rounded-lg w-96">
-                <h2 className="text-2xl font-bold font-mono text-center mb-6">Login for Innovis</h2>
+                <h2 className="text-2xl font-bold font-mono text-center mb-6">Innovis</h2>
                 <div className="mb-6 font-bold w-full h-12 bg-white text-black text-lg p-2 rounded border-2 border-black hover:bg-gray-100 transition-all duration-300">
-                    <text>Continue with Google</text>
+                    <text>Admin Login</text>
                 </div>
                 <text className="mb-4">or</text>
                 <div className="mb-4 mt-4">
@@ -54,7 +54,7 @@ const Login = () => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder='Email'
-                        className="mt-1 block w-full p-2 bg-green-50 border-2 border-gray-300 placeholder-black rounded hover:border-2 hover:border-black focus:outline-none focus:border-2 focus:border-black" 
+                        className="mt-1 block w-full p-2 bg-red-50 border-2 border-gray-300 placeholder-black rounded hover:border-2 hover:border-black focus:outline-none focus:border-2 focus:border-black" 
                         required 
                     />
                 </div>
@@ -65,14 +65,14 @@ const Login = () => {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                         placeholder='Password'
-                        className="mt-1 block w-full p-2 bg-green-50 rounded border-gray-300 placeholder-black border-2 hover:border-2 hover:border-black focus:outline-none focus:border-2 focus:border-black" 
+                        className="mt-1 block w-full p-2 bg-red-50 rounded border-gray-300 placeholder-black border-2 hover:border-2 hover:border-black focus:outline-none focus:border-2 focus:border-black" 
                         required 
                     />
                 </div>
 
                 <button 
                     onClick={handleLogin} 
-                    className="w-full bg-black text-white text-lg p-2 rounded-lg border-2 border-black hover:bg-white hover:text-black transition-colors ease-out duration-300"
+                    className="w-full bg-red-500 text-white text-lg p-2 rounded-lg border-2 border-black hover:bg-white hover:text-black transition-colors ease-out duration-300"
                 >
                     Login
                 </button>
@@ -82,10 +82,8 @@ const Login = () => {
                 </p>
                 
                 <p className="mt-4 text-center text-gray-600">
-                    Don't have an account? <a href="/signup" className="text-blue-500 hover:underline">Sign Up</a>
-                </p>
-                <p className="mt-4 text-center text-gray-600">
-                   <a href="/alogin" className="text-blue-500 hover:underline">Admin login</a>
+                    Don't have an  ADmin account ? <a href="/asignup" className="text-blue-500 hover:underline">Sign Up</a>
+                    <a href="/login" className="text-blue-500 hover:underline"> collaborater Login?</a>
                 </p>
             </div>
         </div>

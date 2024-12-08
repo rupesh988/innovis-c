@@ -23,24 +23,28 @@ export default function ExplorePage() {
       <div className="p-6">
         <h1 className="text-3xl text-green-400 font-bold text-center mb-8">Explore Research Activities</h1>
         <div className="flex flex-wrap justify-center">
+          <a href='/startr' >
           <ActionCard
             title="Start Research"
             description="Initiate a new research project."
             icon={<FaRocket className="text-4xl text-blue-500" />}
             sha="blue-500"
-          />
+          /> </a>
+          <a href="/workflow" >
           <ActionCard
             title="Create Workflow"
             description="Design and manage your research workflow."
             icon={<FaTasks className="text-4xl text-green-500" />}
             sha={"green-500"}
-          />
+          /> </a>
+          <a href="/papers">
           <ActionCard
             title="Publish Papers"
             description="Submit and publish your research papers."
             icon={<FaFileAlt className="text-4xl text-yellow-500" />}
             sha={"yellow-500"}
           />
+          </a>
           <ActionCard
             title="Collaborate with Peers"
             description="Connect with researchers and share ideas."
@@ -59,12 +63,14 @@ export default function ExplorePage() {
             icon={<FaChartLine className="text-4xl text-teal-500" />}
             sha={"teal-500"}
           />
+
+        <a href="/data" >
           <ActionCard
             title="Manage Data"
             description="Organize and manage your research data."
             icon={<FaDatabase className="text-4xl text-red-500" />}
             sha={"red-500"}
-          />
+          /> </a>
           <ActionCard
             title="Discuss Findings"
             description="Engage in discussions about research outcomes."

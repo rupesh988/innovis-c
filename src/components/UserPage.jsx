@@ -23,37 +23,37 @@ export default function Home() {
         <ArticleCard
           title="Understanding Quantum Computing"
           description="An in-depth exploration of the principles of quantum computing and its applications."
-          author="Jane Doe"
+          author="Rupesh"
         />
         <ArticleCard
           title="AI in Healthcare"
           description="How artificial intelligence is transforming the healthcare industry."
-          author="John Smith"
+          author="hari krishna"
         />
         <ArticleCard
           title="Renewable Energy Innovations"
           description="Recent advancements in renewable energy technologies."
-          author="Emily Johnson"
+          author="theATLAS"
         />
         <ArticleCard
           title="The Future of Space Exploration"
           description="Exploring the next frontiers in space technology and research."
-          author="Alice Brown"
+          author="Alice"
         />
         <ArticleCard
           title="The Future of Space Exploration"
           description="Exploring the next frontiers in space technology and research."
-          author="Alice Brown"
+          author="ROBERT"
         />
         <ArticleCard
           title="The Future of Space Exploration"
           description="Exploring the next frontiers in space technology and research."
-          author="Alice Brown"
+          author="mentaj"
         />
         <ArticleCard
           title="The Future of Space Exploration"
           description="Exploring the next frontiers in space technology and research."
-          author="Alice Brown"
+          author="devadasu"
         />
       </div>
     </div>
