@@ -14,12 +14,14 @@ import Paper from './components/exp/publish-paper';
 import StartR from './components/exp/startresearch';
 import Data from './components/exp/data'
 import Admin from "./components/Admin";
+import Account from "./components/Account";
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/account" element={<Account />} />
         <Route path="/data" element={<Data />} />
         <Route path="/startr" element={<StartR />} />
         <Route path="/login" element={<Login />} />

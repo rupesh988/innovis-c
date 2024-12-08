@@ -41,11 +41,11 @@ const Dashboard = () => {
           <div className="col-span-full">
             <h2 className="text-xl text-black font-bold mb-4">Your Papers</h2>
             {papers.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                 {papers.map((paper, index) => (
                   <div
                     key={index}
-                    className="p-4 bg-white/20 backdrop-blur-md shadow-xl rounded-lg border border-white/30"
+                    className="p-4 bg-white/20 backdrop-blur-md shadow-xl rounded-lg border border-white/30 hover:shadow-blue-200 "
                   >
                     <h3 className="text-lg font-bold text-green-900">
                       {paper.title}
@@ -70,7 +70,7 @@ const Dashboard = () => {
                 {projects.map((project, index) => (
                   <div
                     key={index}
-                    className="p-4 bg-white/20 backdrop-blur-md shadow-xl rounded-lg border border-white/30"
+                    className="p-4 bg-white/20 backdrop-blur-md shadow-xl rounded-lg border hover:shadow-red-300 border-white/30"
                   >
                     <h3 className="text-lg font-bold text-green-900">
                       {project.name}

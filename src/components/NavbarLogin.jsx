@@ -32,12 +32,13 @@ const Navbar = (props) => {
                     >
                         {props.login ? "Logout" : "explore"}
                     </button>
-                    
+                    <a href='/account' >
                     <button 
                         className="w-24 bg-black text-white text-lg font-mono p-2 rounded-md border-2 border-black hover:bg-white hover:text-black transition-all duration-500"
                     >
                         Account
                     </button>
+                    </a>
                     
                 </div>
             </div>
